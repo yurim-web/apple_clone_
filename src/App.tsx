@@ -1,6 +1,9 @@
+import { Children } from "react";
 import Headertext from "./components/Headertext";
 import Headline from "./components/Headline";
+import Header from "./components/Layout/Header";
 import PillButton from "./components/PillButton";
+import Banner from "./components/Banner";
 
 function App() {
   return (
@@ -13,7 +16,7 @@ function App() {
         gap: "10px",
       }}
     >
-      <header
+      {/* <header
         style={{
           backgroundColor: "#181818",
           width: "100%",
@@ -30,22 +33,21 @@ function App() {
         <Headertext menuTitle="Mac" />
         <Headertext menuTitle="Mac" />
         <Headertext menuTitle="Mac" />
-      </header>
-      <Headline title="iPad mini" />
-      <div style={{ display: "flex", gap: "10px" }}>
-        <PillButton
-          buttonText="더 알아보기"
-          buttonColor="blue"
-          borderColor="blue"
-          fontColor="white"
-        />
-        <PillButton
-          buttonText="사전 주문하기"
-          buttonColor="white"
-          borderColor="blue"
-          fontColor="blue"
-        />
-      </div>
+      </header> */}
+      <Header
+        children={
+          <>
+            <Headertext menuTitle="스토어" />
+            <Headertext menuTitle="Mac" />
+            <Headertext menuTitle="iPad" />
+            <Headertext menuTitle="iPhone" />
+            <Headertext menuTitle="Mac" />
+            <Headertext menuTitle="Mac" />
+            <Headertext menuTitle="Mac" />
+          </>
+        }
+      />
+      <Banner />
     </div>
   );
 }
