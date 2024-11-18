@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { colorMap, MainColor } from "../styles/Color";
+import { colorMap, MainColor } from "../../styles/Color";
 
 type PillButtonprops = {
   buttonText: string;

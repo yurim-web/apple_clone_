@@ -1,4 +1,3 @@
-import { spawn } from "child_process";
 import { CSSProperties } from "react";
 type Headertextprops = {
   menuTitle: string;
@@ -7,7 +6,7 @@ type Headertextprops = {
 const Headertext = (props: Headertextprops) => {
   const css: CSSProperties = {
     color: "white",
-    padding: "5px 40px",
+    padding: "5px 10px",
     textAlign: "center",
     margin: "0 auto",
   };

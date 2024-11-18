@@ -12,7 +12,7 @@ const Header = ({ children }: Headerprops) => {
     flexDirection: "row",
     alignItems: "center",
     color: "white",
-    padding: "0px 20px",
+    padding: "0px 50px",
   };
   return <header style={headercss}>{children}</header>;
 };
