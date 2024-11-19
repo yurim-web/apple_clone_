@@ -9,6 +9,7 @@ const Headertext = (props: Headertextprops) => {
     padding: "5px 10px",
     textAlign: "center",
     margin: "0 auto",
+    fontSize: "13px",
   };
   return (
     <div style={css}>

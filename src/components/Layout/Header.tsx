@@ -6,15 +6,30 @@ type Headerprops = {
 const Header = ({ children }: Headerprops) => {
   const headercss: CSSProperties = {
     backgroundColor: "#181818",
-    width: "100%",
+    position: "fixed",
+    zIndex: 2,
+    top: "0px",
+    width: "100vw",
     height: "45px",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     color: "white",
-    padding: "0px 50px",
   };
-  return <header style={headercss}>{children}</header>;
+  return (
+    <header style={headercss}>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          justifyContent: "center",
+          margin: "0 auto",
+        }}
+      >
+        {children}
+      </div>
+    </header>
+  );
 };
 
 export default Header;

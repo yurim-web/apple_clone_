@@ -12,6 +12,21 @@ import SubMenu from "./components/SubMenu/SubMenu";
 import SubMenu2 from "./components/SubMenu/SubMenu2";
 import SubMenu3 from "./components/SubMenu/SubMenu3";
 import Footer from "./components/Footer/Footer";
+
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { Pagination } from "swiper/modules";
+import Bottomimg from "./BottomMenu/Bottomimg";
+
 function App() {
   const gridcss = {
     display: "grid",
@@ -46,8 +61,10 @@ function App() {
             <Headertext menuTitle="엔터테이먼트" />
             <Headertext menuTitle="액세서리" />
             <Headertext menuTitle="고객지원" />
-            <CiSearch style={{ fontSize: "28px" }} />
-            <HiOutlineShoppingBag style={{ fontSize: "28px" }} />
+            <CiSearch style={{ fontSize: "23px" }} />
+            <HiOutlineShoppingBag
+              style={{ fontSize: "23px", alignItems: "center" }}
+            />
           </>
         }
       />
@@ -109,6 +126,47 @@ function App() {
           backgroundImage="https://www.apple.com/v/home/bv/images/promos/iphone-tradein/promo_iphone_tradein__bugw15ka691e_large.jpg"
         />
       </div>
+      <>
+        <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+          <SwiperSlide>
+            <Bottomimg
+              text="SF·살아남으려면,목숨 걸고 지켜야 한다."
+              img="https://is1-ssl.mzstatic.com/image/thumb/SSVr2ZxJ3bUc655YFoRy1Q/689x387.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Bottomimg
+              text="드라마·우리 안에는 운명을 스스로 바꿀 용기가 있다"
+              img="https://is1-ssl.mzstatic.com/image/thumb/hCfBMF1R8mitgipZtRrJIw/689x387.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Bottomimg
+              text="SF·살아남으려면,목숨 걸고 지켜야 한다."
+              img="https://is1-ssl.mzstatic.com/image/thumb/IrYGXFGNRK9Mt3z4N3LvWQ/689x387.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Bottomimg
+              text="드라마·스티븐 스필버그,톰 행크스, 게리 고츠만 제작"
+              img="https://is1-ssl.mzstatic.com/image/thumb/PpNA7zp0nJJN23khb-XDUw/689x387.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Bottomimg
+              text="어드벤처·어떤 비밀은 결코 묻히지 않는다"
+              img="https://is1-ssl.mzstatic.com/image/thumb/xO0BO6SH877VpYQg4t5yjw/689x387.jpg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Bottomimg
+              text="범죄·아무 것도 확신하지 마라"
+              img="https://is1-ssl.mzstatic.com/image/thumb/c6frrJga7b7z4Pxb0WLHCQ/689x387.jpg"
+            />
+          </SwiperSlide>
+        </Swiper>
+      </>
+
       <Footer />
     </div>
   );
