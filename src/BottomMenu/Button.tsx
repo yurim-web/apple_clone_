@@ -16,7 +16,7 @@ const Button = (props: Buttonprops) => {
   return (
     <div style={{ position: "relative" }}>
       <div style={{ position: "absolute", left: "30px", bottom: "-370px" }}>
-        <button style={css}>지금 신청하기</button>
+        <button style={css}>지금 신청하기!</button>
         <span
           style={{
             color: "white",
